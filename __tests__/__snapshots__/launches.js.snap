@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllLaunches component renders without error 1`] = `
+<div
+  className="css-12efcmn"
+>
+  <div
+    className="css-p6nzn0"
+  >
+    <div
+      className="css-gg4vpm"
+    >
+      <div>
+        1
+      </div>
+      <div
+        className="css-4g6ai3"
+        onClick={[Function]}
+      >
+        ×
+      </div>
+    </div>
+    <div
+      className="css-111ae3z"
+    >
+      <div
+        className="css-18n2zzf"
+      >
+        coool
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Launch component renders without error 1`] = `
+<div
+  className="css-18n2zzf"
+>
+  coool
+</div>
+`;
+
+exports[`Launches component renders without error 1`] = `
+<div>
+  <div
+    className="css-18n2zzf"
+  >
+    coool
+  </div>
+</div>
+`;
+
+exports[`ShowAll component renders without error 1`] = `
+<div
+  className="css-1ngsyok"
+  onClick={[Function]}
+>
+  Show All (
+  3
+   remaining)
+</div>
+`;

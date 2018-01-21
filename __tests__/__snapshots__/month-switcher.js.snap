@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthSwitcher component renders without error 1`] = `
+<div
+  className="css-1e1pm4a"
+>
+  <div
+    className="css-en2qbu"
+    onClick={[Function]}
+  >
+    ←
+  </div>
+  <div>
+    August
+     
+    2017
+  </div>
+  <div
+    className="css-en2qbu"
+    onClick={[Function]}
+  >
+    →
+  </div>
+</div>
+`;

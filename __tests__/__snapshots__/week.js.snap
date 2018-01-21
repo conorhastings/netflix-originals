@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Week component renders without error 1`] = `
+<div
+  className="css-yluy4z"
+>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      3
+    </div>
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      4
+    </div>
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      5
+    </div>
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      6
+    </div>
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    <div
+      className="css-1i9y2d3"
+    >
+      7
+    </div>
+  </div>
+</div>
+`;

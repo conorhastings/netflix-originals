@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day component renders without error 1`] = `
+<div
+  className="css-1vew5v7"
+>
+  <div
+    className="css-1i9y2d3"
+  >
+    1
+  </div>
+</div>
+`;
+
+exports[`DayHeader component renders without error 1`] = `
+<div
+  className="css-1a7ck8"
+>
+  <div
+    className="css-1vew5v7"
+  >
+    Su
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    Mo
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    Tu
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    We
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    Th
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    Fr
+  </div>
+  <div
+    className="css-1vew5v7"
+  >
+    Sa
+  </div>
+</div>
+`;
+
+exports[`EmptyDay component renders without error 1`] = `
+<div
+  className="css-hmvjj6"
+/>
+`;
