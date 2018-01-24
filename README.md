@@ -39,3 +39,21 @@ Doing this makes the `getStateFromPath` function synchronous instead of returnin
 
 We also move the history listener into the callback of our original setState since their is no reason for us to set up this listener if a user quickly enters and exits the page. Due to this we now safety check for the existence of this.unlistenHistory in componentWillUnmount. You can find a <a href="https://gist.github.com/conorhastings/4414e7daa661af9dd2c135550015dc50">gist link here</a> representing the changes I would make and a link to the <a href="https://netflix-fyuloseqig.now.sh/calendar/2017/1">demo</a> running this version of the code here.
 
+### Thought Process
+
+Since the code is in a single commit below is a rough outline of my thought process when going through the problem:
+
+1. get a month grid laid out using dummy row data in a single component, just to see it visualized before approaching the actual calendar.
+2.  render actual month data using the history and the first day of the month from Luxon (turn day 7 into 0 since the calendar treats sunday as the first day of the week)
+3.  wire up the state that would be responsible for laying out the days of the month.
+4. wire up the state containing the actual movie data, first just as a fixture on the client then moving to data being fetched.
+5. begin breaking pieces into components
+    *    first the week
+    *   followed by day
+    *    followed by empty day square
+    *    followed by launches
+    *    followed by individual launch
+    *    followed by show more
+    *    followed by expanded show more
+Anytime something became too big or felt like it was doing more than one thing I generally broke it out. 
+
