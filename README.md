@@ -48,12 +48,12 @@ Since the code is in a single commit below is a rough outline of my thought proc
 3.  wire up the state that would be responsible for laying out the days of the month.
 4. wire up the state containing the actual movie data, first just as a fixture on the client then moving to data being fetched.
 5. begin breaking pieces into components
-    •    first the week
-    •    followed by day
-    •    followed by empty day square
-    •    followed by launches
-    •    followed by individual launch
-    •    followed by show more
-    •    followed by expanded show more
+    *    first the week
+    *   followed by day
+    *    followed by empty day square
+    *    followed by launches
+    *    followed by individual launch
+    *    followed by show more
+    *    followed by expanded show more
 Anytime something became too big or felt like it was doing more than one thing I generally broke it out. 
 
