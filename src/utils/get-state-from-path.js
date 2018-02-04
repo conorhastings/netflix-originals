@@ -11,7 +11,7 @@ export default function getStateFromPath(history) {
   }
   const firstWeekDay = date.startOf('month').weekday === 7 ? 0 : date.startOf('month').weekday;
   const daysInMonth = date.daysInMonth; 
-  return fetch(`/launches/${date.year}/${date.month}`).then(res => res.json()).then(launches => ({
+  return {
     loading: false,
     year: date.year, 
     month: date.month, 
@@ -19,6 +19,5 @@ export default function getStateFromPath(history) {
     firstWeekDay: firstWeekDay,
     daysInMonth: daysInMonth,
     weekRows: getWeekArrays({ daysInMonth, firstWeekDay }),
-    launches
-  }));
+  };
 }

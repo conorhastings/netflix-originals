@@ -1,5 +1,3 @@
-const { DateTime } = require('luxon');
-
 const data = [
   {
     "id": "ee3c0801-9609-49ea-87fa-fcb9b9f438b9",
@@ -81,19 +79,8 @@ const data = [
     "launch_date": "2017-01-01 00:00:00",
     "title": "conor is good episode 5"
   }
-].reduce((filmsByMonthYearObject, film) => {
-  const parsedDate = DateTime.fromSQL(film.launch_date);
-  if (!parsedDate.invalid) {
-    const hash = `${parsedDate.year}${parsedDate.month}`;
-    filmsByMonthYearObject[hash] = filmsByMonthYearObject[hash] || {};
-    filmsByMonthYearObject[hash][parsedDate.day] = (
-      (filmsByMonthYearObject[hash][parsedDate.day] || [])
-      .concat(film)
-    );
-  }
-  return filmsByMonthYearObject;
-}, {});
+]
 
 module.exports = function getLaunchDates({ year, month }) {
-  return data[`${year}${month}`] || {};
+  return data;
 }

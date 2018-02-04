@@ -5,6 +5,7 @@ import createHistory from 'history/createBrowserHistory';
 import Month from './components/month';
 import MonthSwitcher from './components/month-switcher';
 import getStateFromPath from './utils/get-state-from-path';
+import getLaunches from './utils/get-launches';
 
 const history = createHistory();
 
@@ -20,19 +21,32 @@ const wrapper = css({
 class Calendar extends React.Component {
   constructor() {
     super();
-    this.state = { loading: true };
+    this.state = { loading: true, launchMap: {} };
     this.changeMonth = this.changeMonth.bind(this);
+    this.getLaunchDatesForYearMonth = this.getLaunchDatesForYearMonth.bind(this);
   }
 
   componentDidMount() {
-    this.unlistenHistory = history.listen(location => {
-      getStateFromPath(history).then(state => this.setState(() => state));
-    });
-    getStateFromPath(history).then(state => this.setState(() => state));
+    getLaunches().then(launchMap => (
+      this.setState(
+        Object.assign({loading: false, launchMap }, getStateFromPath(history)), 
+        () => {
+          /* set this in set state callback so we don't do anything wonky before we have data */
+          this.unlistenHistory = history.listen(location => {
+            this.setState(() => getStateFromPath(history));
+          });
+        }
+      )
+    ));
+  }
+
+  getLaunchDatesForYearMonth() {
+    return this.state.launchMap[`${this.state.year}${this.state.month}`] || {};
   }
 
   componentWillUnmount() {
-    this.unlistenHistory();
+    /* since this is now set in a cb check that exists before calling function */
+    this.unlistenHistory && this.unlistenHistory();
   }
 
   changeMonth({ type }) {
@@ -65,7 +79,7 @@ class Calendar extends React.Component {
         />
         <Month 
           weekRows={this.state.weekRows} 
-          launches={this.state.launches} 
+          launches={this.getLaunchDatesForYearMonth()} 
         />
       </div>
     );
