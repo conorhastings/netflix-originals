@@ -1,6 +1,5 @@
 ## Netflix Originals Calendar
 
-<a href="https://netflix-gpxrkvbvbq.now.sh/calendar/2017/1">Access Demo Here</a>
 
 ### Basic calendar rendering
 <img src="./month.png" />
